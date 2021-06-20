@@ -48,5 +48,3 @@ at Line: `24` in `src/app.js`
 
 ---
 <strong><center>© 2021 [♔ Dяεαмү アlαүεя ♔](https://github.com/Dreamyplayer "Dreamy Player") ✌️</center></strong>
-
-`https://github.com/Dreamyplayer/Discord-Nitro-Generator-and-Checker.git`
