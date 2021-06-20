@@ -23,9 +23,11 @@
 - Run These commands in terminal just Make node.js Installed and PATH added
 
 ## Installation
-
+- Open `Folder` where you to clone this repo
+- Open terminal & Run below command.	
+	
 ```bash
-git clone
+git clone https://github.com/Dreamyplayer/Discord-Nitro-Generator-and-Checker.git
 ```
 
 ## Usage
@@ -45,6 +47,15 @@ at Line: `24` in `src/app.js`
 - Open `Terminal` (in same folder)
 - Run `npm install` in terminal (and wait for installs to complete)
 - Run `node .` in terminal (to Start Discord Nitro Script)
+
+## Contributing
+
+1. 🍴 [Fork the repository](https://github.com/Dreamyplayer/Discord-Nitro-Generator-and-Checker/fork)!
+2. Clone your fork: `git clone https://github.com/your-username/Discord-Nitro-Generator-and-Checker.git`
+3. Create your feature branch: `git checkout -b my-new-feature`
+4. Commit your changes: `git commit -am 'Add some feature'`
+5. Push to the branch: `git push origin my-new-feature`
+6. Submit a pull request 🤯
 
 ---
 <strong><center>© 2021 [♔ Dяεαмү アlαүεя ♔](https://github.com/Dreamyplayer "Dreamy Player") ✌️</center></strong>
