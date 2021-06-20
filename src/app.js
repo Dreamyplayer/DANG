@@ -16,9 +16,9 @@ let num = 1;
     },
   })
     .then(res => {
-      if (res.ok === 429) {
+      if (res.status === 429) {
         process.exit(0);
-      } else if (res.ok === 200) {
+      } else if (res.status === 200) {
         console.log(`🎉 Found Working Discord Nitro 🎉 \nhttps://discord.gift/${codes}`);
 
         const WEBHOOK_URL = undefined;
