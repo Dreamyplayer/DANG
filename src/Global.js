@@ -1,4 +1,3 @@
-const readline = require('readline');
 const fetch = require('node-fetch');
 const chalk = require('chalk');
 const { Webhook } = require('discord-webhook-node');
@@ -56,4 +55,4 @@ let E = [
   '🌰',
 ];
 
-module.exports = { readline, fetch, chalk, makeid, clutter, E, Webhook };
+module.exports = { fetch, chalk, makeid, clutter, E, Webhook };
