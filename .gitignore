@@ -8,8 +8,6 @@ yarn-error.log*
 # test
 test.js
 
-# yarn
-yarn.lock
 
 # Runtime data
 pids

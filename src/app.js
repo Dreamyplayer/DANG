@@ -1,5 +1,8 @@
 const { chalk, fetch, clutter, makeid, E, Webhook } = require('./Global');
 
+// NOTE: DON'T TRY TO DECREASE TIME
+// THIS IS MINIMUM.
+
 let num = 1;
 
 (async function Loop() {
@@ -23,7 +26,7 @@ let num = 1;
 
         const hook = new Webhook(WEBHOOK_URL);
         const IMAGE_URL =
-          'https://cdn.discordapp.com/attachments/851533693657808926/855850972830760960/EGS_Discord_Nitro.png';
+          'https://cdn.discordapp.com/attachments/851533693657808926/856145091688136714/ezgif.com-gif-maker_5.png';
 
         hook.setUsername('Discord Nitro Gen');
         hook.setAvatar(IMAGE_URL);
@@ -33,16 +36,16 @@ let num = 1;
         let x = 0;
 
         console.log(`\n${chalk.green('Testing')} ${chalk.magenta(num)}`);
-        console.log(` - ${chalk.green(res.ok)} || ${res.status} || ${chalk.blue(res.statusText)}\n`);
+        console.log(` ❌ ${chalk.green(res.ok)} || ${res.status} || ${chalk.blue(res.statusText)}\n`);
 
         const loader = setInterval(() => {
           process.stdout.write(`\r${E[x++]} Checking - ${chalk.yellow(codes)}`);
           x %= E.length;
-        }, 750);
+        }, 550);
 
         setTimeout(() => {
           clearInterval(loader);
-        }, 30000);
+        }, 20000);
       }
     })
     .catch(console.error);
@@ -52,7 +55,7 @@ let num = 1;
     if (num < 5000) {
       await Loop();
     }
-  }, 30000);
+  }, 20000);
 })();
 
 console.log(chalk.blue.bold(`Press ${chalk.red('Cntrl + c')} to exit Script.`));
@@ -66,4 +69,4 @@ setInterval(() => {
   console.log(
     `${chalk.bold.cyan(`\n🐏 This Script uses approxiamately ${Math.round(used * 100) / 100} MB / 4GB RAM`)}`,
   );
-}, 600000); // 10 min
+}, 600000);
