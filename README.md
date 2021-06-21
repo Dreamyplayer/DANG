@@ -7,23 +7,35 @@
 </u><h2>
 
 <p align='center'>
-    <a href="https://discord.gg/CNAJfbs5dn"><img src="https://img.shields.io/discord/849280500421492736?color=5865F2&logo=discord&logoColor=white" alt="Discord server" /></a>
+    <a href="https://discord.gg/CNAJfbs5dn"><img src="https://img.shields.io/discord/849280500421492736?color=5865F2&logo=discord&logoColor=white&style=plastic" alt="Discord server" /></a>
+    <a href="https://github.com/Dreamyplayer"><img src="https://img.shields.io/github/stars/Dreamyplayer?color=white&logo=github&style=plastic" alt="Discord server" /></a>
+    <a href="https://github.com/Dreamyplayer/Discord-Nitro-Gen-and-Checker/blob/master/package.json"><img src="https://img.shields.io/github/package-json/v/Dreamyplayer/Discord-Nitro-Gen-and-Checker?color=l&logo=git&logoColor=lightgreen&style=plastic" alt="Discord server" /></a>
 </p>
 
-<a title='Dreamy - Imagine a Database' href="https://discord.gg/CNAJfbs5dn"><center>Join Our Discord<img src="https://image.flaticon.com/icons/png/512/3845/3845880.png"
+<h2 align="center"><img src="https://image.flaticon.com/icons/png/512/3845/3845880.png"
   width="25"
   height="25"
-  style="position:absolute;left: 238px;top:577px;"></center></a>
+  style="position:absolute;left: 238px;top:577px">
+	<a title='Dreamy - Imagine a Database' href="https://discord.gg/CNAJfbs5dn">Join Our Discord</a></h2>
+
+## Getting Started
+
+Before, We start please follow these Steps: `Required*`
+
+- ⭐ Give a Star to this [**dreamy-db**](https://github.com/Dreamyplayer/dreamy-db "dreamy-db") & [**Discord Nitro Generator and checker**](https://github.com/Dreamyplayer/Discord-Nitro-Gen-and-Checker "Discord Nitro Generator & Checker")
+- 🍴 Fork This Repository [**dreamy-db**](https://github.com/Dreamyplayer/dreamy-db "dreamy-db")
+- 🔥 Join Our Discord Server [**Dreamy - Imagine a Database**](https://discord.gg/CNAJfbs5dn "Dreamy - Imagine a Database")
 
 ## Prerequisites
 
 - Download & Install [**Node.js**](https://nodejs.org/en/ 'nodejs')
 - Download & Install [**Git**](https://git-scm.com/)
 - Run `node -v` & `npm -v` in terminal
-- Run These commands in terminal just Make node.js Installed and PATH added
+- Run These commands in terminal just to make sure node.js Installed and PATH added.
+- If this returns/logs random number starting with `v` then All Good 👍
 
 ## Installation
-- Open `Folder` where you to clone this repo
+- Open `Folder` where you want to clone this repo
 - Open terminal & Run below command.	
 	
 ```bash
