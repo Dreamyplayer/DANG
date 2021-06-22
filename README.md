@@ -29,12 +29,14 @@ Before, We start please follow these Steps: `Required*`
 ## Prerequisites
 
 - Download & Install [**Node.js**](https://nodejs.org/en/ 'nodejs')
-- Download & Install [**Git**](https://git-scm.com/)
+- Download & Install [**Git**](https://git-scm.com/) (Optional)
 - Run `node -v` & `npm -v` in terminal
 - Run These commands in terminal just to make sure node.js Installed and PATH added.
 - If this returns/logs random number starting with `v` then All Good 👍
+- If [**Git**](https://git-scm.com/) not installed download code directly [**Here**](https://github.com/Dreamyplayer/Discord-Nitro-Gen-and-Checker "Discord Ntro Gen & Checker").
 
 ## Installation
+- If Git is not installed Leave|Ignore [Installation](https://github.com/Dreamyplayer/Discord-Nitro-Gen-and-Checker#installation) Step.
 - Open `Folder` where you want to clone this repo
 - Open terminal & Run below command.	
 	
