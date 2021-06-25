@@ -8,7 +8,7 @@
   width="25"
   height="25"
   style="position:absolute;left: 240px;top:577px"><a title='Dreamy - Imagine a Database' href="https://discord.gg/CNAJfbs5dn">Join Our Discord<br></a>
-  <img src="https://cdn.discordapp.com/attachments/851533693657808926/857214104359534592/Screenshot_from_2021-06-23_16-32-21.png" />
+  <a href="https://github.com/Dreamyplayer/Discord-Nitro-Gen-and-Checker"><img src="https://cdn.discordapp.com/attachments/851533693657808926/857214104359534592/Screenshot_from_2021-06-23_16-32-21.png" />
 <h1>
 
 ## Getting Started
