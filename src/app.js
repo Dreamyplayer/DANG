@@ -54,7 +54,7 @@ setTimeout(() => {
 
           const hook = new Webhook(WEBHOOK_URL);
           const IMAGE_URL =
-            'https://cdn.discordapp.com/attachments/851533693657808926/856145091688136714/ezgif.com-gif-maker_5.png';
+            'https://discord.com/assets/b941bc1dfe379db6cc1f2acc5a612f41.png';
 
           hook.setUsername('Discord Nitro Gen');
           hook.setAvatar(IMAGE_URL);
