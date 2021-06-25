@@ -1,6 +1,6 @@
 <h1 align="center">
   <a href="https://dreamyplayer.gitbook.io/dreamy-db/">
-  <img src="https://cdn.discordapp.com/attachments/851533693657808926/856106084787290132/p1_2959756_03e1f525_prev_ui.png" alt="dreamy-db"/></a><br>Discord Nitro Generator and Checker<br>
+  <img src="https://discord.com/assets/b941bc1dfe379db6cc1f2acc5a612f41.png" alt="dreamy-db" width="420"/></a><br>Discord Nitro Generator and Checker<br>
   <a href="https://discord.gg/CNAJfbs5dn"><img src="https://img.shields.io/discord/849280500421492736?color=5865F2&logo=discord&logoColor=white&style=plastic" alt="Discord server" /></a>
   <a href="https://github.com/Dreamyplayer"><img src="https://img.shields.io/github/stars/Dreamyplayer?color=white&logo=github&style=plastic" alt="Discord server" /></a>
   <a href="https://github.com/Dreamyplayer/Discord-Nitro-Gen-and-Checker/blob/master/package.json"><img src="https://img.shields.io/github/package-json/v/Dreamyplayer/Discord-Nitro-Gen-and-Checker?color=l&logo=git&logoColor=lightgreen&style=plastic" alt="Discord server" /></a>
@@ -65,4 +65,4 @@ at Line: `24` in `src/app.js`
 6. Submit a pull request 🤯
 
 ---
-<strong><center>© 2021 [♔ Dяεαмү アlαүεя ♔](https://github.com/Dreamyplayer "Dreamy Player") ✌️</center></strong>
+<h2 align="center">© 2021 <a href="https://github.com/Dreamyplayer/">♔ Dяεαмү アlαүεя ♔<a> ✌️</h2>
