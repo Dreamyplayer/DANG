@@ -12,6 +12,7 @@ const {
   RAN_GEN_TOP,
   Welcome,
 } = require('./Global');
+const { WEBHOOK_URL } = require('./config');
 
 console.log(Welcome);
 
@@ -49,8 +50,7 @@ setTimeout(() => {
         } else if (res.status === 200) {
           console.log(`🎉 Found Working Discord Nitro 🎉 \nhttps://discord.gift/${codes}`);
 
-          const WEBHOOK_URL = undefined;
-          if (WEBHOOK_URL === undefined) return;
+          if (WEBHOOK_URL === '') return;
 
           const hook = new Webhook(WEBHOOK_URL);
           const IMAGE_URL =
@@ -96,10 +96,12 @@ setTimeout(() => {
 }, 3000);
 
 setTimeout(() => {
-  console.log(
-    `${chalk.yellow('⚠️ NOTE:')} If you haven't added WEBHOOK_URL, you won't be notified for Valid Nitro codes
-      you should always keep an eye on Terminal/console for valid Nitro codes`,
-  );
+  if (WEBHOOK_URL === '') {
+    console.log(
+      `${chalk.yellow('⚠️ NOTE:')} If you haven't added WEBHOOK_URL, you won't be notified for Valid Nitro codes
+        you should always keep an eye on Terminal/console for valid Nitro codes`,
+    );
+  }
 }, 6000);
 
 // Checking Memeory Status
