@@ -47,9 +47,6 @@ git clone https://github.com/Dreamyplayer/Discord-Nitro-Generator-and-Checker.gi
 - const WEBHOOK_URL = '';
 + const WEBHOOK_URL = 'PLACE YOUR WEBHOOK URL HERE';
 ```
-
-at Line: `24` in `src/app.js`
-
 - Open Project Folder (`./Discord-nitro/`)
 - Open `Terminal` (in same folder)
 - Run `npm install` in terminal (and wait for installs to complete)
