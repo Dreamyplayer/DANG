@@ -41,10 +41,10 @@ git clone https://github.com/Dreamyplayer/Discord-Nitro-Generator-and-Checker.gi
 
 - Create a Webhook and Copy your `WEBHOOK_URL` ([**Read article**](https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks))
 
-- Open `src/app.js` file (`src` folder)
+- Open `src/config.js` file (`src` folder)
 
 ```diff
-- const WEBHOOK_URL = undefined;
+- const WEBHOOK_URL = '';
 + const WEBHOOK_URL = 'PLACE YOUR WEBHOOK URL HERE';
 ```
 
