@@ -1,3 +1,3 @@
-const webhook = ''; // ADD your WEBHOOK_URL Here inside ''
+const WEBHOOK_URL = ''; // ADD your WEBHOOK_URL Here inside ''
 
-module.exports = { webhook };
+module.exports = { WEBHOOK_URL };
