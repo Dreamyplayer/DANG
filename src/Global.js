@@ -1,5 +1,5 @@
 /* eslint-disable no-irregular-whitespace */
-const readline = require('readline');
+const RandExp = require("randexp");
 const fetch = require('node-fetch');
 const chalk = require('chalk');
 const { Webhook } = require('discord-webhook-node');
@@ -66,6 +66,8 @@ const RAN_GEN_Direct = new Array(24).join().replace(/(.|$)/g, function () {
 const possible = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789×';
 const RAN_GEN_4 = [...Array(24)].map(_ => possible[~~(Math.random() * possible.length)]).join('');
 
+const RAN_REGEX = new RandExp(/^[0-9,a-z,A-Z]{24}$/).gen();
+
 let E = [
   '🥳',
   '⚡',
@@ -130,6 +132,7 @@ module.exports = {
   RAN_GEN_4,
   RAN_GEN_Direct,
   RAN_GEN_Shuff,
+  RAN_REGEX,
   E,
   Webhook,
   Welcome,
