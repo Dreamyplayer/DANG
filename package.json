@@ -14,6 +14,7 @@
   },
   "dependencies": {
     "discord-webhook-node": "^1.1.8",
-    "node-fetch": "^2.6.1"
+    "node-fetch": "^2.6.1",
+    "randexp": "^0.5.3"
   }
 }
