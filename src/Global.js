@@ -122,7 +122,6 @@ let Discord = `Need help? ${chalk.hex('#5865F2').bold('Join Our Discord')} \n${c
 let Welcome = Welcome_txt + Credit_txt + Discord;
 
 module.exports = {
-  readline,
   fetch,
   chalk,
   RAN_GEN_TOP,
