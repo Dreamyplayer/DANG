@@ -9,6 +9,7 @@ const {
   RAN_GEN_4,
   RAN_GEN_Direct,
   RAN_GEN_Shuff,
+  RAN_REGEX,
   RAN_GEN_TOP,
   Welcome,
 } = require('./Global');
@@ -28,6 +29,7 @@ setTimeout(() => {
       RAN_GEN_3(24),
       RAN_GEN_4,
       RAN_GEN_Direct,
+      RAN_REGEX,
       RAN_GEN_TOP(24),
       RAN_GEN_Shuff(RAN_GEN_1(24)),
       RAN_GEN_Shuff(RAN_GEN_2(24)),
