@@ -4,7 +4,7 @@
   "description": "A Powerful Nitro Generator and checker.",
   "main": "src/app.js",
   "author": "♔ Dяεαмү アlαүεя ♔",
-  "license": "MIT",
+  "license": "Apache-2.0",
   "private": true,
   "scripts": {
     "start": "node src/app.js"
