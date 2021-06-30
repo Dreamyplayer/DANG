@@ -8,7 +8,7 @@
   width="25"
   height="25"
   style="position:absolute;left: 240px;top:577px"><a title='Dreamy - Imagine a Database' href="https://discord.gg/CNAJfbs5dn">Join Our Discord<br></a>
-  <a href="https://github.com/Dreamyplayer/Discord-Nitro-Gen-and-Checker"><img src="https://cdn.discordapp.com/attachments/851533693657808926/857214104359534592/Screenshot_from_2021-06-23_16-32-21.png" />
+  <a href="https://github.com/Dreamyplayer/Discord-Nitro-Gen-and-Checker"><img src="https://cdn.discordapp.com/attachments/851533693657808926/857214104359534592/Screenshot_from_2021-06-23_16-32-21.png" /></a>
 <h1>
 
 ## Getting Started
@@ -31,8 +31,8 @@ Before, We start please follow these Steps: `Required*`
 ## Installation
 - If Git is not installed Leave|Ignore [Installation](https://github.com/Dreamyplayer/Discord-Nitro-Gen-and-Checker#installation) Step.
 - Open `Folder` where you want to clone this repo
-- Open terminal & Run below command.	
-	
+- Open terminal & Run below command.
+
 ```bash
 git clone https://github.com/Dreamyplayer/Discord-Nitro-Generator-and-Checker.git
 ```

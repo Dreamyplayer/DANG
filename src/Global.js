@@ -1,5 +1,9 @@
 /* eslint-disable no-irregular-whitespace */
+<<<<<<< HEAD
 const RandExp = require("randexp");
+=======
+const RandExp = require('randexp');
+>>>>>>> add remote
 const fetch = require('node-fetch');
 const chalk = require('chalk');
 const { Webhook } = require('discord-webhook-node');
