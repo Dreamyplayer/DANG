@@ -1,20 +1,31 @@
 {
-  "name": "nitro-gen",
-  "version": "1.0.0",
+  "name": "dreamy-nitro-gen",
+  "version": "2.0.0",
   "description": "A Powerful Nitro Generator and checker.",
   "main": "src/app.js",
   "author": "♔ Dяεαмү アlαүεя ♔",
   "license": "Apache-2.0",
   "private": true,
   "scripts": {
-    "start": "node src/app.js"
+    "start": "node src/app.js",
+    "lint": "eslint --fix --ignore-path .gitignore ."
   },
   "devDependencies": {
-    "chalk": "^4.1.1"
+    "chalk": "^4.1.1",
+    "eslint": "^7.30.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-config-strongloop": "^2.1.0",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-prettier": "^3.4.0",
+    "prettier": "^2.3.2"
   },
   "dependencies": {
-    "discord-webhook-node": "^1.1.8",
+    "https": "^1.0.0",
+    "intl": "^1.2.5",
+    "mkdirp": "^1.0.4",
     "node-fetch": "^2.6.1",
-    "randexp": "^0.5.3"
+    "proxy-agent": "^4.0.1",
+    "randexp": "^0.5.3",
+    "ws": "^7.4.4"
   }
 }
