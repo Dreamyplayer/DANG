@@ -1,6 +1,6 @@
 <h1 align="center">
   <a href="https://dreamyplayer.gitbook.io/dreamy-db/">
-  <img src="https://discord.com/assets/b941bc1dfe379db6cc1f2acc5a612f41.png" alt="dreamy-db" width="420"/></a><br>Discord Nitro Generator and Checker<br>
+  <img src="https://discord.com/assets/b941bc1dfe379db6cc1f2acc5a612f41.png" alt="dreamy-db" width="420"/></a><br>DANG: <br>Dreamy's Awesome Nitro Generator<br>
   <a href="https://discord.gg/CNAJfbs5dn"><img src="https://img.shields.io/discord/849280500421492736?color=5865F2&logo=discord&logoColor=white&style=plastic" alt="Discord server" /></a>
   <a href="https://github.com/Dreamyplayer"><img src="https://img.shields.io/github/stars/Dreamyplayer?color=white&logo=github&style=plastic" alt="Discord server" /></a>
   <a href="https://github.com/Dreamyplayer/Discord-Nitro-Gen-and-Checker/blob/master/package.json"><img src="https://img.shields.io/github/package-json/v/Dreamyplayer/Discord-Nitro-Gen-and-Checker?color=l&logo=git&logoColor=lightgreen&style=plastic" alt="Discord server" /></a>
@@ -37,20 +37,19 @@ Before, We start please follow these Steps: `Required*`
 git clone https://github.com/Dreamyplayer/Discord-Nitro-Generator-and-Checker.git
 ```
 
+## Configuration
+
+- Open `config.json` file (./root/ or ./DANG/ folder).
+- Length `24` Premium Nitro.
+- Length `16` classic Nitro.
+- Amount 10,000 is max set below.
+- Change proxiesType [valid values] `http, socks4, socks5`  (optional)
+> Keep all other settings values **default**.
 ## Usage
-
-- Create a Webhook and Copy your `WEBHOOK_URL` ([**Read article**](https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks))
-
-- Open `src/config.js` file (`src` folder)
-
-```diff
-- const WEBHOOK_URL = '';
-+ const WEBHOOK_URL = 'PLACE YOUR WEBHOOK URL HERE';
-```
-- Open Project Folder (`./Discord-nitro/`)
-- Open `Terminal` (in same folder)
+- Open Project Folder (`./DANG/`)
+- Open `Terminal||Console||CMD` (in same folder)
 - Run `npm install` in terminal (and wait for installs to complete)
-- Run `node .` in terminal (to Start Discord Nitro Script)
+- Run `npm start` in terminal (to Start Discord Nitro Script)
 
 ## Contributing
 
