@@ -34,9 +34,16 @@ Before, We start please follow these Steps: `Required*`
 - Open terminal & Run below command.
 
 ```bash
-git clone https://github.com/Dreamyplayer/Discord-Nitro-Generator-and-Checker.git
+git clone https://github.com/Dreamyplayer/DANG.git
 ```
-
+  
+## Usage
+  
+- Open Project Folder (`./DANG/`)
+- Open `Terminal||Console||CMD` (in same folder)
+- Run `npm install` in terminal (and wait for installs to complete)
+- Run `npm start` in terminal (to Start Discord Nitro Script)
+  
 ## Configuration
 
 - Open `config.json` file (./root/ or ./DANG/ folder).
@@ -45,11 +52,6 @@ git clone https://github.com/Dreamyplayer/Discord-Nitro-Generator-and-Checker.gi
 - Amount 10,000 is max set below.
 - Change proxiesType [valid values] `http, socks4, socks5`  (optional)
 > Keep all other settings values **default**.
-## Usage
-- Open Project Folder (`./DANG/`)
-- Open `Terminal||Console||CMD` (in same folder)
-- Run `npm install` in terminal (and wait for installs to complete)
-- Run `npm start` in terminal (to Start Discord Nitro Script)
 
 ## Contributing
 
