@@ -26,10 +26,10 @@ Before, We start please follow these Steps: `Required*`
 - Run `node -v` & `npm -v` in terminal
 - Run These commands in terminal just to make sure node.js Installed and PATH added.
 - If this returns/logs random number starting with `v` then All Good 👍
-- If [**Git**](https://git-scm.com/) not installed download code directly [**Here**](https://github.com/Dreamyplayer/Discord-Nitro-Gen-and-Checker "Discord Ntro Gen & Checker").
+- If [**Git**](https://git-scm.com/) not installed download code directly [**Here**](https://github.com/Dreamyplayer/DANG "Discord Ntro Gen & Checker").
 
 ## Installation
-- If Git is not installed Leave|Ignore [Installation](https://github.com/Dreamyplayer/Discord-Nitro-Gen-and-Checker#installation) Step.
+- If Git is not installed Leave|Ignore [Installation](https://github.com/Dreamyplayer/DANG#installation) Step.
 - Open `Folder` where you want to clone this repo
 - Open terminal & Run below command.
 
@@ -55,8 +55,8 @@ git clone https://github.com/Dreamyplayer/DANG.git
 
 ## Contributing
 
-1. 🍴 [Fork the repository](https://github.com/Dreamyplayer/Discord-Nitro-Gen-and-Checker/fork)!
-2. Clone your fork: `git clone https://github.com/your-username/Discord-Nitro-Gen-and-Checker.git`
+1. 🍴 [Fork the repository](https://github.com/Dreamyplayer/DANG/fork)!
+2. Clone your fork: `git clone https://github.com/your-username/DANG.git`
 3. Create your feature branch: `git checkout -b my-new-feature`
 4. Commit your changes: `git commit -am 'Add some feature'`
 5. Push to the branch: `git push origin my-new-feature`
