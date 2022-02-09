@@ -142,7 +142,7 @@ class Proxy {
       };
 
     this.used(1);
-    this.debug(chalk.yellow(`Checking ${code}...`));
+    this.debug(chalk.yellow(`Checking ${code}`));
 
     try {
       const body = await (
@@ -251,7 +251,7 @@ async function main() {
   const e = () =>
     proxy ? ((max - c) / (5 * proxies.filter(e => e.working).length)) * 6e4 : ((max - c).length / 5) * 6e4;
   console.info(
-    `${chalk.bgGreen('[Launching]')} ${chalk.yellow(max)} ${chalk.green('checks')}, ${chalk.red(
+    `${chalk.bgGreen('[Launching]')} ${chalk.yellow(numberFormat(max))} ${chalk.green('checks')}, ${chalk.red(
       'estimated time:',
     )} ${chalk.blue(duration(e(), !0, !0))} | ${chalk.blue(datetocompact(e() + Date.now()))}`,
   );
