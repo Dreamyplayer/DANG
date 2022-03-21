@@ -11,19 +11,18 @@ const {
   RAN_GEN_Direct_C,
   RAN_GEN_Shuff,
   RAN_GEN_TOP,
-  RAN_REGEX,
-  RAN_REGEX_C,
 } = require('../utils/genfunctions');
 const { numberFormat, duration, wait } = require('../utils/functions');
-const { fs, mkdir, performance, chalk } = require('../utils/modules');
-const { length, random, amount, outfile } = require('../config.json').generator;
+const { existsSync, unlinkSync, createWriteStream } = require('node:fs');
+const {  mkdir, performance, chalk } = require('../utils/modules');
+const { length, random, amount, outfile } = require('../config').generator;
 
 (module.exports = (e = 16, _ = !1, N = 1, o) =>
   new Promise(async n => {
     const r = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789×';
     const t = r.length - 1;
     const l = [];
-    o && fs.existsSync(o) && fs.unlinkSync(o);
+    o && existsSync(o) && unlinkSync(o);
     const E = performance.now();
     if (_) {
       require.main === module &&
@@ -42,7 +41,6 @@ const { length, random, amount, outfile } = require('../config.json').generator;
             RAN_GEN_3(24),
             RAN_GEN_4,
             RAN_GEN_Direct,
-            RAN_REGEX,
             RAN_GEN_TOP(24),
             RAN_GEN_Shuff(RAN_GEN_1(24)),
             RAN_GEN_Shuff(RAN_GEN_2(24)),
@@ -57,7 +55,6 @@ const { length, random, amount, outfile } = require('../config.json').generator;
             RAN_GEN_3(16),
             RAN_GEN_4_C,
             RAN_GEN_Direct_C,
-            RAN_REGEX_C,
             RAN_GEN_TOP(16),
             RAN_GEN_Shuff(RAN_GEN_1(16)),
             RAN_GEN_Shuff(RAN_GEN_2(16)),
@@ -97,7 +94,7 @@ const { length, random, amount, outfile } = require('../config.json').generator;
     const R = performance.now();
     if (o) {
       await mkdir(o.match(/.*(\/|\\)/g)[0]);
-      const e = fs.createWriteStream(o, { encoding: 'utf-8' });
+      const e = createWriteStream(o, { encoding: 'utf-8' });
       e.write(l.join('\n')), e.close();
     }
     n({ start: E, end: R, codes: l });

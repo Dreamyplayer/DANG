@@ -2,20 +2,22 @@
 /* eslint-disable no-sequences */
 'use strict';
 
-const { Welcome, ProxyAgent, fetch, fs, mkdir, performance, chalk, LogoMain } = require('../utils/modules');
+const fetch = require('cross-fetch');
+const { existsSync, writeFileSync, readFileSync, closeSync, openSync, unlinkSync, createWriteStream } = require('node:fs');
+const { sync } = require('mkdirp');
+const { Welcome, ProxyAgent, performance, chalk, LogoMain } = require('../utils/modules');
 const { wait, duration, datetocompact, numberFormat } = require('../utils/functions');
 const { interval, updateRate, proxy, proxiesType, proxiesfile, debug, codesfile, bURL, params } =
-  require('../config.json').checker;
-const { length, random } = require('../config.json').generator;
+  require('../config').checker;
+const { length, random } = require('../config').generator;
 
 let wss;
 
 const gen = require('./gen.js');
 
-mkdir.sync(codesfile.match(/.*(\/|\\)/g)[0]);
-if (!fs.existsSync(codesfile)) fs.writeFileSync(codesfile, '');
-let codes = fs
-  .readFileSync(codesfile, { encoding: 'utf-8' })
+sync(codesfile.match(/.*(\/|\\)/g)[0]);
+if (!existsSync(codesfile)) writeFileSync(codesfile, '');
+let codes = readFileSync(codesfile, { encoding: 'utf-8' })
   .split('\n')
   .filter(c => c)
   .map(c => formatCode(c));
@@ -219,10 +221,9 @@ class Proxy {
 let proxies = [];
 const localProxy = new Proxy(null);
 proxy &&
-  (mkdir.sync(proxiesfile.match(/.*(\/|\\)/g)[0]),
-  fs.existsSync(proxiesfile) || (fs.closeSync(fs.openSync(proxiesfile, 'w')), grabProxies()),
-  (proxies = fs
-    .readFileSync(proxiesfile, { encoding: 'utf-8' })
+  (sync(proxiesfile.match(/.*(\/|\\)/g)[0]),
+  existsSync(proxiesfile) || (closeSync(openSync(proxiesfile, 'w')), grabProxies()),
+  (proxies = readFileSync(proxiesfile, { encoding: 'utf-8' })
     .split('\n')
     .filter(e => e)
     .map((e, o) => new Proxy(e, o))).push(localProxy));
@@ -329,18 +330,18 @@ function end(e) {
   (pauseMs = 6e4), (pause = !0), (pauseLog = 6e4);
   let i = '';
   let n = codesfile.match(/.*(\/|\\)/g)[0] + 'valids.txt';
-  mkdir.sync(n.match(/.*(\/|\\)/g)[0]),
-    fs.existsSync(n) && ((i = fs.readFileSync(n, { encoding: 'utf-8' })), fs.unlinkSync(n));
-  let s = fs.createWriteStream(n, { encoding: 'utf-8' });
+  sync(n.match(/.*(\/|\\)/g)[0]),
+    existsSync(n) && ((i = readFileSync(n, { encoding: 'utf-8' })), unlinkSync(n));
+  let s = createWriteStream(n, { encoding: 'utf-8' });
   s.write(i + valids.join('\n')),
     s.close(),
-    mkdir.sync(codesfile.match(/.*(\/|\\)/g)[0]),
-    fs.existsSync(codesfile) && fs.unlinkSync(codesfile),
-    (s = fs.createWriteStream(codesfile, { encoding: 'utf-8' })).write(''),
+    sync(codesfile.match(/.*(\/|\\)/g)[0]),
+    existsSync(codesfile) && unlinkSync(codesfile),
+    (s = createWriteStream(codesfile, { encoding: 'utf-8' })).write(''),
     s.close(),
-    mkdir.sync(proxiesfile.match(/.*(\/|\\)/g)[0]),
-    fs.existsSync() && fs.unlinkSync(proxiesfile),
-    (s = fs.createWriteStream(proxiesfile, { encoding: 'utf-8' })).write(
+    sync(proxiesfile.match(/.*(\/|\\)/g)[0]),
+    existsSync() && unlinkSync(proxiesfile),
+    (s = createWriteStream(proxiesfile, { encoding: 'utf-8' })).write(
       proxies
         .filter(e => e.working)
         .map(e => e.proxy)
