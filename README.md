@@ -10,6 +10,7 @@
   height="30"
   style="position:absolute;left: 240px;top:577px"><a title='Dreamy - Imagine a Database' href="https://discord.gg/CNAJfbs5dn">Join Our Discord<br></a>
   <a href="https://github.com/Dreamyplayer/DANG"><img src="https://cdn.discordapp.com/attachments/851533693657808926/857214104359534592/Screenshot_from_2021-06-23_16-32-21.png" /></a>
+  <a href="https://github.com/Dreamyplayer/DANG"><img src="https://cdn.discordapp.com/attachments/851533693657808926/955707310796324885/Screenshot_from_2022-03-22_11-27-48.png" /></a>
 <h1>
 
 ## Getting Started
