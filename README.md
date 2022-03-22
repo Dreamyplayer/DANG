@@ -31,10 +31,10 @@ Before, We start please follow these Steps: <kbd>Required*</kbd>
 ## Installation
 - If Git is not installed Ignore [Installation](https://github.com/Dreamyplayer/DANG#installation) Step.
 - Open <kbd>Folder</kbd> where you want to clone this repo
-- Open terminal & Run below command (don't copy `$`).
+- Open terminal & Run below command.
 
 ```console
-$ git clone https://github.com/Dreamyplayer/DANG.git
+git clone https://github.com/Dreamyplayer/DANG.git
 ```
 
 ## Usage
