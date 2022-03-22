@@ -4,6 +4,7 @@
   <a href="https://discord.gg/CNAJfbs5dn"><img src="https://img.shields.io/discord/849280500421492736?color=5865F2&logo=discord&logoColor=white&style=plastic" alt="Discord server" /></a>
   <a href="https://github.com/Dreamyplayer"><img src="https://img.shields.io/github/stars/Dreamyplayer?color=white&logo=github&style=plastic" alt="Discord server" /></a>
   <a href="https://github.com/Dreamyplayer/DANG/blob/master/package.json"><img src="https://img.shields.io/github/package-json/v/Dreamyplayer/Discord-Nitro-Gen-and-Checker?color=l&logo=git&logoColor=lightgreen&style=plastic" alt="Discord server" /></a>
+  <a href="https://paypal.me/DreamyPlayer"><img src="https://img.shields.io/badge/donate-paypal-blue"></a>
   <br><img src="https://cdn-icons-png.flaticon.com/512/5968/5968756.png"
   width="30"
   height="30"
