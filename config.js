@@ -15,7 +15,7 @@ const checker = {
   proxiesfile: "./db/proxies/proxies.txt",
   codesfile: "./db/codes/codes.txt",
 
-  bURL: "https://discordapp.com/api/v9/entitlements/gift-codes/",
+  bURL: "https://discord.com/api/v9/entitlements/gift-codes/",
   params: "?with_application=false&with_subscription_plan=true",
 };
 
