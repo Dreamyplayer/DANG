@@ -1,31 +1,19 @@
 {
   "name": "dang",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Powerful Nitro Generator and checker.",
   "main": "src/app.js",
   "author": "♔ Dяεαмү アlαүεя ♔",
   "license": "Apache-2.0",
   "private": true,
   "scripts": {
-    "start": "node src/app.js",
-    "lint": "eslint --fix --ignore-path .gitignore ."
+    "start": "node src/app.js"
   },
   "devDependencies": {
-    "chalk": "^4.1.1",
-    "eslint": "^7.30.0",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-config-strongloop": "^2.1.0",
-    "eslint-plugin-import": "^2.23.4",
-    "eslint-plugin-prettier": "^3.4.0",
-    "prettier": "^2.3.2"
+    "chalk": "^4.1.1"
   },
   "dependencies": {
-    "https": "^1.0.0",
-    "intl": "^1.2.5",
-    "mkdirp": "^1.0.4",
-    "node-fetch": "^2.6.1",
-    "proxy-agent": "^4.0.1",
-    "randexp": "^0.5.3",
-    "ws": "^7.4.4"
+    "cross-fetch": "^3.1.5",
+    "discord-webhook-node": "^1.1.8"
   }
 }
