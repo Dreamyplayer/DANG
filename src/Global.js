@@ -1,11 +1,10 @@
 'use strict';
 /* eslint-disable no-irregular-whitespace */
-const RandExp = require('randexp');
-const fetch = require('node-fetch');
+const fetch = require('cross-fetch');
 const chalk = require('chalk');
 const { Webhook } = require('discord-webhook-node');
-const os = require('os');
-const totalRAM = os.totalmem();
+const { totalmem } = require('node:os');
+const totalRAM = totalmem();
 
 const RAN_GEN_TOP = length => {
   if (!length) {
@@ -75,10 +74,6 @@ const RAN_GEN_4 = [...Array(24)].map(_ => possible[~~(Math.random() * possible.l
 
 const RAN_GEN_4_C = [...Array(16)].map(_ => possible[~~(Math.random() * possible.length)]).join('');
 
-const RAN_REGEX = new RandExp(/^[0-9,a-z,A-Z]{24}$/).gen();
-
-const RAN_REGEX_C = new RandExp(/^[0-9,a-z,A-Z]{24}$/).gen();
-
 let E = [
   '🥳',
   '⚡',
@@ -143,9 +138,7 @@ module.exports = {
   RAN_GEN_4,
   RAN_GEN_Direct,
   RAN_GEN_Shuff,
-  RAN_REGEX,
   RAN_GEN_4_C,
-  RAN_REGEX_C,
   RAN_GEN_Direct_C,
   totalRAM,
   E,
