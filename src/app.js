@@ -10,12 +10,12 @@ const {
   RAN_GEN_4,
   RAN_GEN_Direct,
   RAN_GEN_Shuff,
-  RAN_REGEX,
+
   RAN_GEN_TOP,
   Welcome,
   RAN_GEN_4_C,
   RAN_GEN_Direct_C,
-  RAN_REGEX_C,
+  
   totalRAM,
 } = require('./Global');
 const { WEBHOOK_URL } = require('./config');
@@ -34,7 +34,7 @@ setTimeout(() => {
       RAN_GEN_3(24),
       RAN_GEN_4,
       RAN_GEN_Direct,
-      RAN_REGEX,
+
       RAN_GEN_TOP(24),
       RAN_GEN_Shuff(RAN_GEN_1(24)),
       RAN_GEN_Shuff(RAN_GEN_2(24)),
@@ -48,7 +48,7 @@ setTimeout(() => {
       RAN_GEN_3(16),
       RAN_GEN_4_C,
       RAN_GEN_Direct_C,
-      RAN_REGEX_C,
+
       RAN_GEN_TOP(16),
       RAN_GEN_Shuff(RAN_GEN_1(16)),
       RAN_GEN_Shuff(RAN_GEN_2(16)),
