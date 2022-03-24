@@ -13,6 +13,7 @@
     "chalk": "^4.1.1"
   },
   "dependencies": {
-    "cross-fetch": "^3.1.5"
+    "cross-fetch": "^3.1.5",
+    "discord-webhook-node": "^1.1.8"
   }
 }
