@@ -7,7 +7,7 @@ const { existsSync, writeFileSync, readFileSync, closeSync, openSync, unlinkSync
 const { sync } = require('mkdirp');
 const { Welcome, ProxyAgent, performance, chalk, LogoMain } = require('../utils/modules');
 const { wait, duration, datetocompact, numberFormat } = require('../utils/functions');
-const { interval, updateRate, proxy, proxiesType, proxiesfile, debug, codesfile, bURL, params } =
+const { interval, autoGrabProxies, updateRate, proxy, proxiesType, proxiesfile, debug, codesfile, bURL, params } =
   require('../config').checker;
 const { length, random } = require('../config').generator;
 
@@ -235,17 +235,19 @@ async function grabProxies() {
     return codes;
   }
 
-  lastGrab = Date.now();
-  await fetch(
-    `https://api.proxyscrape.com/?request=displayproxies&proxytype=${proxiesType}&timeout=10000&country=all&anonymity=all&ssl=yes`,
-  ).then(async res => {
-    const body = await res.text();
-    const lines = body.split('\n').filter(line => !proxies.find(p => p.proxy === line));
-    log(`${chalk.bgBlue('[AUTO]')} grabbed ${chalk.yellow(lines.length)} proxies.`);
-    for (let line of lines) {
-      proxies.push(new Proxy(line, (proxies[proxies.length - 1]?.id || 0) + 1));
-    }
-  });
+  if (autoGrabProxies) {
+    lastGrab = Date.now();
+    await fetch(
+      `https://api.proxyscrape.com/?request=displayproxies&proxytype=${proxiesType}&timeout=10000&country=all&anonymity=all&ssl=yes`,
+    ).then(async res => {
+      const body = await res.text();
+      const lines = body.split('\n').filter(line => !proxies.find(p => p.proxy === line));
+      log(`${chalk.bgBlue('[AUTO]')} grabbed ${chalk.yellow(lines.length)} proxies.`);
+      for (let line of lines) {
+        proxies.push(new Proxy(line, (proxies[proxies.length - 1]?.id || 0) + 1));
+      }
+    });
+  }
 }
 
 async function main() {
