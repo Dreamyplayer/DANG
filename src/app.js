@@ -246,14 +246,16 @@ async function grabProxies() {
 
   if (autoGrabProxies) {
     lastGrab = Date.now();
-    await fetch(`https://api.proxyscrape.com/?request=displayproxies&status=alive&proxytype=socks5`).then(async res => {
-      const body = await res.text();
-      const lines = body.split('\n').filter(line => !proxies.find(p => p.proxy === line));
-      log(`${bgBlue('[AUTO]')} grabbed ${yellow(lines.length)} proxies.`);
-      for (let line of lines) {
-        proxies.push(new Proxy(line, (proxies[proxies.length - 1]?.id || 0) + 1));
-      }
-    });
+    await fetch(`https://api.proxyscrape.com/?request=displayproxies&status=alive&proxytype=${proxiesType}`).then(
+      async res => {
+        const body = await res.text();
+        const lines = body.split('\n').filter(line => !proxies.find(p => p.proxy === line));
+        log(`${bgBlue('[AUTO]')} grabbed ${yellow(lines.length)} proxies.`);
+        for (let line of lines) {
+          proxies.push(new Proxy(line, (proxies[proxies.length - 1]?.id || 0) + 1));
+        }
+      },
+    );
   }
 }
 
