@@ -34,10 +34,10 @@ Before, We start please follow these Steps: <kbd>Required*</kbd>
 - Run <kbd>node -v</kbd> & <kbd>npm -v</kbd> in terminal
 - Run These commands in terminal just to make sure node.js Installed and PATH added.
 - If this returns/logs random number starting with <kbd>v</kbd> then All Good 👍
-- If [**Git**](https://git-scm.com/ 'Git') not installed download code directly [**Here**](https://github.com/Dreamyplayer/DANG "Discord Ntro Gen & Checker").
 
 ## 🍀 Installation
-- If Git is not installed Ignore [Installation](https://github.com/Dreamyplayer/DANG#installation) Step.
+- If Git is not installed Ignore [Installation](https://github.com/Dreamyplayer/DANG#installation) step -
+And download code directly [**Here**](https://github.com/Dreamyplayer/DANG "Discord Ntro Gen & Checker").
 - Open <kbd>Folder</kbd> where you want to clone this repo
 - Open terminal & Run below command.
 
@@ -49,7 +49,8 @@ git clone https://github.com/Dreamyplayer/DANG.git
 
 - Open Project Folder (<kbd>./DANG/</kbd>)
 - Open <kbd>Terminal</kbd>||<kbd>Console</kbd>||<kbd>CMD</kbd> (in same folder)
-- Run <kbd>npm install</kbd> in terminal (and wait for installs to complete)
+- `[Tip]:` Hold shift and right click to view terminal option in the same folder.
+- Run <kbd>npm install --omit=dev</kbd> or <kbd>npm install</kbd> in terminal (and wait for installs to complete)
 - Run <kbd>npm start</kbd> in terminal (to Start Discord Nitro Script)
 
 ## 👽 Configuration
@@ -58,7 +59,7 @@ git clone https://github.com/Dreamyplayer/DANG.git
 - Length <kbd>24</kbd> Premium Nitro.
 - Length <kbd>16</kbd> classic Nitro.
 - Amount `10,000` is max set below.
-- Change proxiesType [valid values] <kbd>http, socks4, socks5</kbd>  (optional)
+- Change proxiesType [valid values] <kbd>http, https, socks4, socks5</kbd>  (optional)
 > Keep all other settings values **default**.
 
 ## ✨ Contributing
