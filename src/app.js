@@ -314,7 +314,8 @@ async function tryCode() {
   let r = codes.find(r => !r.c);
   if (!r) return;
   (r.c = 'ongoing'), (r.t = Date.now());
-  let e = r.code.match(/[0-z]+/g);
+  let e = r.code;
+  // console.log(r.code, 'aas')
   if (!e) return;
   let t = e[e.length - 1];
   let a = `${bURL}${t}${params}`;
