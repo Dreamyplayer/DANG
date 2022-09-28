@@ -18,8 +18,7 @@ const {
 } = require('node:fs');
 const { setTimeout } = require('node:timers');
 
-const { Welcome, LogoMain } = require('../utils/modules');
-const { wait, compactMode } = require('../utils/functions');
+const { wait, compactMode, Welcome, LogoMain } = require('../utils/functions');
 const { interval, autoGrabProxies, updateRate, proxy, proxiesType, proxiesfile, debug, codesfile, bURL, params } =
   require('../config').checker;
 const { length, random } = require('../config').generator;
