@@ -62,7 +62,7 @@ const { length, random, amount, outfile } = require('../config').generator;
     n({ start: E, end: R, codes: l });
   })),
   require.main === module &&
-    (console.log(`${bgBlue('[Establishing]')} Generation. . .\n`),
+    (console.clear(), console.log(`${bgBlue('[Establishing]')} Generation. . .\n`),
     module.exports(length, random, amount, outfile).then(e => {
       wait(6000).then(() => {
         console.info(

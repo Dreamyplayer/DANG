@@ -45,6 +45,7 @@ let lastGrab = 0;
 
 process.on('SIGINT', () => end(performance.now()));
 
+console.clear()
 wait(1e3).then(() => {
   log(LogoMain);
 });
@@ -315,7 +316,6 @@ async function tryCode() {
   if (!r) return;
   (r.c = 'ongoing'), (r.t = Date.now());
   let e = r.code;
-  // console.log(r.code, 'aas')
   if (!e) return;
   let t = e[e.length - 1];
   let a = `${bURL}${t}${params}`;
