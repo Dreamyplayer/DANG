@@ -1,5 +1,3 @@
-'use strict';
-
 let wait = (t = 1e3) =>
   new Promise(e => {
     setTimeout(e, t);

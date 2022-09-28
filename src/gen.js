@@ -1,6 +1,4 @@
 /* eslint-disable no-sequences */
-'use strict';
-
 const {
   RAN_GEN_1,
   RAN_GEN_2,
@@ -14,7 +12,7 @@ const {
 } = require('../utils/genfunctions');
 const { numberFormat, duration, wait } = require('../utils/functions');
 const { existsSync, unlinkSync, createWriteStream } = require('node:fs');
-const {  mkdir, performance, chalk } = require('../utils/modules');
+const { mkdir, performance, chalk } = require('../utils/modules');
 const { length, random, amount, outfile } = require('../config').generator;
 
 (module.exports = (e = 16, _ = !1, N = 1, o) =>

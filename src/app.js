@@ -1,9 +1,16 @@
 /* eslint-disable no-control-regex */
 /* eslint-disable no-sequences */
-'use strict';
 
 const fetch = require('cross-fetch');
-const { existsSync, writeFileSync, readFileSync, closeSync, openSync, unlinkSync, createWriteStream } = require('node:fs');
+const {
+  existsSync,
+  writeFileSync,
+  readFileSync,
+  closeSync,
+  openSync,
+  unlinkSync,
+  createWriteStream,
+} = require('node:fs');
 const { sync } = require('mkdirp');
 const { Welcome, ProxyAgent, performance, chalk, LogoMain } = require('../utils/modules');
 const { wait, duration, datetocompact, numberFormat } = require('../utils/functions');
@@ -332,8 +339,7 @@ function end(e) {
   (pauseMs = 6e4), (pause = !0), (pauseLog = 6e4);
   let i = '';
   let n = codesfile.match(/.*(\/|\\)/g)[0] + 'valids.txt';
-  sync(n.match(/.*(\/|\\)/g)[0]),
-    existsSync(n) && ((i = readFileSync(n, { encoding: 'utf-8' })), unlinkSync(n));
+  sync(n.match(/.*(\/|\\)/g)[0]), existsSync(n) && ((i = readFileSync(n, { encoding: 'utf-8' })), unlinkSync(n));
   let s = createWriteStream(n, { encoding: 'utf-8' });
   s.write(i + valids.join('\n')),
     s.close(),

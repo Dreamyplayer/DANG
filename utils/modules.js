@@ -1,6 +1,4 @@
 /* eslint-disable no-irregular-whitespace */
-'use strict';
-
 const mkdir = require('mkdirp');
 const ProxyAgent = require('proxy-agent');
 const chalk = require('chalk');
