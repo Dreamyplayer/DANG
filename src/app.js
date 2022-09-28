@@ -246,9 +246,7 @@ async function grabProxies() {
 
   if (autoGrabProxies) {
     lastGrab = Date.now();
-    await fetch(
-      `https://api.proxyscrape.com/?request=displayproxies&proxytype=${proxiesType}&timeout=10000&country=all&anonymity=all&ssl=yes`,
-    ).then(async res => {
+    await fetch(`https://api.proxyscrape.com/?request=displayproxies&status=alive&proxytype=socks5`).then(async res => {
       const body = await res.text();
       const lines = body.split('\n').filter(line => !proxies.find(p => p.proxy === line));
       log(`${bgBlue('[AUTO]')} grabbed ${yellow(lines.length)} proxies.`);
