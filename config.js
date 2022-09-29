@@ -1,5 +1,5 @@
 const generator = {
-  length: 16,
+  length: 24,
   random: true,
   amount: 10000,
   outfile: './db/genrated_codes.txt',
