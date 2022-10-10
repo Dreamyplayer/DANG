@@ -1,33 +1,24 @@
 /* eslint-disable no-control-regex */
 /* eslint-disable no-sequences */
 
-const { sync } = require('mkdirp');
-const ms = require('ms');
-const ProxyAgent = require('proxy-agent');
-const { yellow, green, bgBlue, red, bgRed, bgGreen, cyan, blue } = require('colorette');
-const { performance } = require('node:perf_hooks');
-const fetch = require('cross-fetch');
-const {
-  existsSync,
-  writeFileSync,
-  readFileSync,
-  closeSync,
-  openSync,
-  unlinkSync,
-  createWriteStream,
-} = require('node:fs');
-const { setTimeout } = require('node:timers');
+import { bgBlue, bgGreen, bgRed, blue, cyan, green, red, yellow } from 'colorette';
+import fetch from 'cross-fetch';
+import mkdir from 'mkdirp';
+import ms from 'ms';
+import { closeSync, createWriteStream, existsSync, openSync, readFileSync, unlinkSync, writeFileSync } from 'node:fs';
+import { performance } from 'node:perf_hooks';
+import { setTimeout } from 'node:timers';
+import ProxyAgent from 'proxy-agent';
+import { checker } from '../config.js';
+import { LogoMain, Welcome } from '../utils/Entry.js';
+import { compactMode, wait } from '../utils/funtions.js';
 
-const { wait, compactMode, Welcome, LogoMain } = require('../utils/functions');
 const { interval, autoGrabProxies, updateRate, proxy, proxiesType, proxiesfile, debug, codesfile, bURL, params } =
-  require('../config').checker;
-const { length, random } = require('../config').generator;
+  checker;
 
 let wss;
 
-const gen = require('./gen.js');
-
-sync(codesfile.match(/.*(\/|\\)/g)[0]);
+mkdir.sync(codesfile.match(/.*(\/|\\)/g)[0]);
 if (!existsSync(codesfile)) writeFileSync(codesfile, '');
 let codes = readFileSync(codesfile, { encoding: 'utf-8' })
   .split('\n')
@@ -45,7 +36,7 @@ let lastGrab = 0;
 
 process.on('SIGINT', () => end(performance.now()));
 
-console.clear()
+console.clear();
 wait(1e3).then(() => {
   log(LogoMain);
 });
@@ -101,11 +92,6 @@ async function actualizeCodes() {
     .filter(e => !e.c || e.c === 'ongoing')
     .map(e => (Date.now() - e.t > 3e4 && ((e.c = !1), (e.t = 1 / 0)), e));
   dbug(`${yellow(codes.length - e.length)} codes purged.`);
-  const o = codesMaxSize - e.length;
-  if (o > 0) {
-    const c = await gen(length, random, o);
-    e.push(...c.codes.map(e => formatCode(e))), log(`${bgBlue('[ADDED]')} ${yellow(o)} more codes.`);
-  }
   return e;
 }
 
@@ -231,7 +217,7 @@ class Proxy {
 let proxies = [];
 const localProxy = new Proxy(null);
 proxy &&
-  (sync(proxiesfile.match(/.*(\/|\\)/g)[0]),
+  (mkdir.sync(proxiesfile.match(/.*(\/|\\)/g)[0]),
   existsSync(proxiesfile) || (closeSync(openSync(proxiesfile, 'w')), grabProxies()),
   (proxies = readFileSync(proxiesfile, { encoding: 'utf-8' })
     .split('\n')
@@ -337,15 +323,15 @@ function end(e) {
   (pauseMs = 6e4), (pause = !0), (pauseLog = 6e4);
   let i = '';
   let n = codesfile.match(/.*(\/|\\)/g)[0] + 'valid_codes.txt';
-  sync(n.match(/.*(\/|\\)/g)[0]), existsSync(n) && ((i = readFileSync(n, { encoding: 'utf-8' })), unlinkSync(n));
+  mkdir.sync(n.match(/.*(\/|\\)/g)[0]), existsSync(n) && ((i = readFileSync(n, { encoding: 'utf-8' })), unlinkSync(n));
   let s = createWriteStream(n, { encoding: 'utf-8' });
   s.write(i + valids.join('\n')),
     s.close(),
-    sync(codesfile.match(/.*(\/|\\)/g)[0]),
+    mkdir.sync(codesfile.match(/.*(\/|\\)/g)[0]),
     existsSync(codesfile) && unlinkSync(codesfile),
     (s = createWriteStream(codesfile, { encoding: 'utf-8' })).write(''),
     s.close(),
-    sync(proxiesfile.match(/.*(\/|\\)/g)[0]),
+    mkdir.sync(proxiesfile.match(/.*(\/|\\)/g)[0]),
     existsSync() && unlinkSync(proxiesfile),
     (s = createWriteStream(proxiesfile, { encoding: 'utf-8' })).write(
       proxies

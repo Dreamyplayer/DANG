@@ -1,10 +1,11 @@
 {
   "name": "dang",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "A Powerful Nitro Generator and checker.",
   "main": "src/app.js",
   "author": "♔ Dяεαмү アlαүεя ♔",
   "license": "Apache-2.0",
+  "type": "module",
   "private": true,
   "repository": {
     "type": "git",
@@ -12,7 +13,7 @@
   },
   "scripts": {
     "start": "node src/app",
-    "prestart": "git pull origin master && node -e 'setTimeout(()=>{},5000)' && node src/gen"
+    "prestart": "git pull origin master && node -e 'setTimeout(()=>{},5000)' && node src/Generator"
   },
   "devDependencies": {
     "eslint": "^8.24.0",
