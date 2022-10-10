@@ -4,10 +4,12 @@ export const generator = {
   outfile: './db/genrated_codes.txt',
 };
 
+const randomProxy = ['http', 'https', 'socks4', 'socks5'];
+
 export const checker = {
   interval: 50,
   updateRate: 1000,
-  proxiesType: 'http',
+  proxiesType: randomProxy[Math.floor(Math.random() * randomProxy.length)],
   proxy: true,
   autoGrabProxies: true,
   debug: false,
