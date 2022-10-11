@@ -67,7 +67,7 @@ wss &&
     });
   }, updateRate);
 
-function log(e) {
+const log = e => {
   pauseLog
     ? wait(pauseLog).then(() => {
         (pauseLog = 0), log(e);
@@ -77,23 +77,23 @@ function log(e) {
         clients.forEach(o => {
           o.send(JSON.stringify({ type: 'log', message: e.replace(/\[\d{1,2}m/g, '') }));
         }));
-}
+};
 
-function dbug(o) {
+const dbug = o => {
   debug && log(`${yellow('[DBUG]')} ${o}`);
-}
+};
 
-function formatCode(o) {
+const formatCode = o => {
   return { code: o, c: !1, t: 1 / 0 };
-}
+};
 
-async function actualizeCodes() {
+const actualizeCodes = async () => {
   let e = codes
     .filter(e => !e.c || e.c === 'ongoing')
     .map(e => (Date.now() - e.t > 3e4 && ((e.c = !1), (e.t = 1 / 0)), e));
   dbug(`${yellow(codes.length - e.length)} codes purged.`);
   return e;
-}
+};
 
 proxy &&
   setInterval(() => {
@@ -224,7 +224,7 @@ proxy &&
     .filter(e => e)
     .map((e, o) => new Proxy(e, o))).push(localProxy));
 
-async function grabProxies() {
+const grabProxies = async () => {
   if (Date.now() - lastGrab < 10000) {
     dbug(red(`Codes actualization in cooldown, waiting ${ms(Date.now() - lastGrab)}.`));
     await wait(1000);
@@ -244,9 +244,9 @@ async function grabProxies() {
       },
     );
   }
-}
+};
 
-async function main() {
+const main = async () => {
   const e = () =>
     proxy ? ((max - c) / (5 * proxies.filter(e => e.working).length)) * 6e4 : ((max - c).length / 5) * 6e4;
   console.info(
@@ -295,9 +295,9 @@ async function main() {
       await wait(pause ? pauseMs : interval);
   }
   end(performance.now());
-}
+};
 
-async function tryCode() {
+const tryCode = async () => {
   let r = codes.find(r => !r.c);
   if (!r) return;
   (r.c = 'ongoing'), (r.t = Date.now());
@@ -317,9 +317,9 @@ async function tryCode() {
     return dbug(red(`Rate-limited | Ready in ${ms(localProxy.readyAt - Date.now())}.`)), localProxy.readyAt;
   const i = proxy ? await o.check(a, t) : await localProxy.check(a, t);
   return (r.c = i.c), (r.t = 1 / 0), i.c && c++, i.v && valids.push(t), !0;
-}
+};
 
-function end(e) {
+const end = e => {
   (pauseMs = 6e4), (pause = !0), (pauseLog = 6e4);
   let i = '';
   let n = codesfile.match(/.*(\/|\\)/g)[0] + 'valid_codes.txt';
@@ -348,7 +348,7 @@ function end(e) {
       );
     }),
     wait(4e3).then(() => process.exit());
-}
+};
 
 const start = performance.now();
 wait(1e4).then(() => {
