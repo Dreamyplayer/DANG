@@ -23,8 +23,9 @@
 
 Before, We start please follow these Steps: <kbd>Required*</kbd>
 
-- ⭐ Give a Star to this [**dreamy-db**](https://github.com/Dreamyplayer/dreamy-db "dreamy-db") & [**Discord Nitro Generator and checker**](https://github.com/Dreamyplayer/DANG "Discord Nitro Generator & Checker")
-- 🍴 Fork This Repository [**DANG.**](https://github.com/Dreamyplayer/DANG "DANG")
+- ✌️ Follow Me [**Dreamy Player**](https://github.com/Dreamyplayer "Dreamy Player")
+- ⭐ Give a Star to this [**Dreamy's Awesome Nitro Generator**](https://github.com/Dreamyplayer/DANG "Discord Nitro Generator & Checker")
+- 🍴 Fork This Repository [**DANG.**](https://github.com/Dreamyplayer/DANG/fork "DANG")
 - 🔥 Join Our Discord Server [**Dreamy - Imagine a Database**](https://discord.gg/CNAJfbs5dn "Dreamy - Imagine a Database")
 
 ## 🧩 Prerequisites
