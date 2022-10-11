@@ -11,10 +11,9 @@ import { setTimeout } from 'node:timers';
 import ProxyAgent from 'proxy-agent';
 import { checker } from '../config.js';
 import { LogoMain, Welcome } from '../utils/Entry.js';
-import { compactMode, wait } from '../utils/funtions.js';
+import { compactMode, dbug, formatCode, wait } from '../utils/funtions.js';
 
-const { interval, autoGrabProxies, updateRate, proxy, proxiesType, proxiesfile, debug, codesfile, bURL, params } =
-  checker;
+const { interval, autoGrabProxies, updateRate, proxy, proxiesType, proxiesfile, codesfile, bURL, params } = checker;
 
 let wss;
 
@@ -33,6 +32,18 @@ let pauseMs = interval;
 let pause = false;
 let pauseLog = 0;
 let lastGrab = 0;
+
+const log = e => {
+  pauseLog
+    ? wait(pauseLog).then(() => {
+        (pauseLog = 0), log(e);
+      })
+    : (console.log(e),
+      wss &&
+        clients.forEach(o => {
+          o.send(JSON.stringify({ type: 'log', message: e.replace(/\[\d{1,2}m/g, '') }));
+        }));
+};
 
 process.on('SIGINT', () => end(performance.now()));
 
@@ -66,26 +77,6 @@ wss &&
         s.send(JSON.stringify({ type: 'proxies', up: e, alive: t, dead: i }));
     });
   }, updateRate);
-
-const log = e => {
-  pauseLog
-    ? wait(pauseLog).then(() => {
-        (pauseLog = 0), log(e);
-      })
-    : (console.log(e),
-      wss &&
-        clients.forEach(o => {
-          o.send(JSON.stringify({ type: 'log', message: e.replace(/\[\d{1,2}m/g, '') }));
-        }));
-};
-
-const dbug = o => {
-  debug && log(`${yellow('[DBUG]')} ${o}`);
-};
-
-const formatCode = o => {
-  return { code: o, c: !1, t: 1 / 0 };
-};
 
 const actualizeCodes = async () => {
   let e = codes
