@@ -2,9 +2,10 @@ import { bgBlue, cyan, green, red } from 'colorette';
 import mkdir from 'mkdirp';
 import ms from 'ms';
 import { createWriteStream, existsSync, unlinkSync } from 'node:fs';
+import { performance } from 'node:perf_hooks';
 import { generator } from '../config.js';
-import { getRan } from '../utils/GenFunctions.js';
 import { compactMode, getRandomInt, wait } from '../utils/funtions.js';
+import { getRan } from '../utils/GenFunctions.js';
 
 const { length, amount, outfile } = generator;
 
