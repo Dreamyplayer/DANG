@@ -1,14 +1,10 @@
 <h1 align="center">
   <a href="https://github.com/Dreamyplayer/DANG/">
   <img src="https://discord.com/assets/b941bc1dfe379db6cc1f2acc5a612f41.png" alt="DANG" width="420"/></a><br>DANG: <br>Dreamy's Awesome Nitro Generator<br>
-  <a href="https://discord.gg/CNAJfbs5dn"><img src="https://img.shields.io/discord/849280500421492736?color=5865F2&logo=discord&logoColor=white&style=plastic" alt="Discord server" /></a>
+  <a href="/"><img src="https://img.shields.io/discord/849280500421492736?color=5865F2&logo=discord&logoColor=white&style=plastic" alt="Discord server" /></a>
   <a href="https://github.com/Dreamyplayer"><img src="https://img.shields.io/github/stars/Dreamyplayer?color=white&logo=github&style=plastic" alt="Discord server" /></a>
   <a href="https://github.com/Dreamyplayer/DANG/blob/master/package.json"><img src="https://img.shields.io/github/package-json/v/Dreamyplayer/Discord-Nitro-Gen-and-Checker?color=l&logo=git&logoColor=lightgreen&style=plastic" alt="Discord server" /></a>
   <a href="https://paypal.me/DreamyPlayer"><img src="https://img.shields.io/badge/donate-paypal-blue"></a> 🥀
-  <br><img src="https://cdn-icons-png.flaticon.com/512/5968/5968756.png"
-  width="30"
-  height="30"
-  style="position:absolute;left: 240px;top:577px"><a title='Dreamy - Imagine a Database' href="https://discord.gg/CNAJfbs5dn">Join Our Discord<br></a>
   <a href="https://github.com/Dreamyplayer/DANG"><img src="https://cdn.discordapp.com/attachments/851533693657808926/857214104359534592/Screenshot_from_2021-06-23_16-32-21.png" /></a>
   <a href="https://github.com/Dreamyplayer/DANG"><img src="https://cdn.discordapp.com/attachments/851533693657808926/955707310796324885/Screenshot_from_2022-03-22_11-27-48.png" /></a>
 </h1>
@@ -26,7 +22,6 @@ Before, We start please follow these Steps: <kbd>Required*</kbd>
 - ✌️ Follow Me [**Dreamy Player**](https://github.com/Dreamyplayer "Dreamy Player")
 - ⭐ Give a Star to this [**Dreamy's Awesome Nitro Generator**](https://github.com/Dreamyplayer/DANG "Discord Nitro Generator & Checker")
 - 🍴 Fork This Repository [**DANG.**](https://github.com/Dreamyplayer/DANG/fork "DANG")
-- 🔥 Join Our Discord Server [**Dreamy - Imagine a Database**](https://discord.gg/CNAJfbs5dn "Dreamy - Imagine a Database")
 
 ## 🧩 Prerequisites
 
